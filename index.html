@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currently Brewing...</title>
+    <style>
+        /* Basic styling for centering and appearance */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default body margin */
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light grey background */
+            color: #333; /* Dark grey text */
+            font-size: 1.5em; /* Make text larger */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        /* Style for the coffee cup */
+        .coffee-cup {
+            display: inline-block; /* Allows transform and animation */
+            font-size: 1.5em; /* Make the cup bigger */
+            margin-left: 10px; /* Space between text and cup */
+            /* Apply the animation */
+            animation: steam 1.5s ease-out infinite;
+        }
+
+        /* Define the animation */
+        @keyframes steam {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-15px) scale(1.1); /* Move up and slightly enlarge */
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        brewing.... <span class="coffee-cup">☕️</span>
+    </div>
+</body>
+</html>
